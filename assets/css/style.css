@@ -320,7 +320,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #23b6ff repeat;
+  background: url(../../assets/img/painting.webp) no-repeat center / cover;
   position: relative;
 }
 
