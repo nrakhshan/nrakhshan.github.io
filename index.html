@@ -416,106 +416,11 @@ in-depth customization of the product
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <div class="row">
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="bidesh beacon" src="/assets/img/bideshbeacon.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Bidesh Beacon<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A map application designed to assist South Asian newcomers with finding resources and utilities
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Topics:</b> C++, STL, OSM Database, GTK Library, Djikstra's Algorithm, UI/UX Design</li>
-
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://www.nusaibarakhshan.ca/beacon" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/fugitive.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Fall Fugitive<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A top-down car-chasing FPGA game where the player is a police officer trying to catch some bank robbers
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Topics:</b> Assembly, Nios II, DE1-SoC, FPGA, VGA</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://www.nusaibarakhshan.ca/fall" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flask Project -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/snackimg.png"
-                style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Snacktime Slider<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An FPGA puzzle game set inside a vending machine
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Topics:</b> Verilog, Quartus Prime, FPGA, DE1-SoC, VGA, ModelSim</li>
-
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://www.nusaibarakhshan.ca/snack" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ************* -->
+        <div id="project-list" class="row"></div>
+        <div class="center-align">
+          <button id="load-more-projects" class="btn teal waves-effect waves-light" type="button">
+            Load More
+          </button>
         </div>
       </div>
     </section>
@@ -685,6 +590,93 @@ in-depth customization of the product
       </div>
     </section>
   </main>
+
+  <script>
+    var projects = [
+      {
+        title: "Bidesh Beacon",
+        image: "/assets/img/bideshbeacon.png",
+        description: "A map application designed to assist South Asian newcomers with finding resources and utilities",
+        topics: "C++, STL, OSM Database, GTK Library, Dijkstra's Algorithm, UI/UX Design",
+        url: "https://www.nusaibarakhshan.ca/beacon",
+        linkLabel: "View Bidesh Beacon online"
+      },
+      {
+        title: "Fall Fugitive",
+        image: "/assets/img/fugitive.png",
+        description: "A top-down car-chasing FPGA game where the player is a police officer trying to catch bank robbers",
+        topics: "Assembly, Nios II, DE1-SoC, FPGA, VGA",
+        url: "https://www.nusaibarakhshan.ca/fall",
+        linkLabel: "View Fall Fugitive online"
+      },
+      {
+        title: "Snacktime Slider",
+        image: "/assets/img/snackimg.png",
+        description: "An FPGA puzzle game set inside a vending machine",
+        topics: "Verilog, Quartus Prime, FPGA, DE1-SoC, VGA, ModelSim",
+        url: "https://www.nusaibarakhshan.ca/snack",
+        linkLabel: "View Snacktime Slider online"
+      },
+      {
+        title: "Legaseed",
+        image: "/assets/img/legaseed.png",
+        description: "An approximately 1-hour long puzzle game about a group of students searching their school for treasure",
+        topics: "Godot, GDScript, Game Development",
+        url: "https://www.nusaibarakhshan.ca/legaseed",
+        linkLabel: "View Legaseed online"
+      }
+    ];
+
+    var displayedProjects = 0;
+    var projectsPerPage = 2;
+
+    function renderProjects() {
+      var projectList = document.getElementById("project-list");
+      var loadMoreButton = document.getElementById("load-more-projects");
+      var nextProjects = projects.slice(displayedProjects, displayedProjects + projectsPerPage);
+
+      nextProjects.forEach(function (project) {
+        projectList.insertAdjacentHTML("beforeend", `
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img alt="${project.title}" src="${project.image}" style="height: 100%; width: 100%" class="activator" />
+              </div>
+              <div class="card-content">
+                <span class="card-title activator teal-text hoverline">${project.title}<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>${project.description}</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Topics:</b> ${project.topics}</li>
+                </ul>
+                <div class="card-action">
+                  <a aria-label="${project.linkLabel}" href="${project.url}" target="_blank" rel="noopener"
+                    data-position="top" data-tooltip="View Online"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                      class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+
+      displayedProjects += nextProjects.length;
+      if (displayedProjects >= projects.length) {
+        loadMoreButton.disabled = true;
+        loadMoreButton.style.display = "none";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      renderProjects();
+      document.getElementById("load-more-projects").addEventListener("click", renderProjects);
+    });
+  </script>
 
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
